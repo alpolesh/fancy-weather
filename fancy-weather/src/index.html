@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Canvas" />
+    <meta name="author" lang="en" content="Andrei Poleshchuck" />
+    <title>Fancy weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="ico" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="header">
+                <div class="header__buttons-block buttons-block">
+                    <div class="buttons-block__refresh">
+                        <button type="submit" class="refresh">refresh</button>
+                    </div>
+                    <div class="buttons-block__language">
+                        <button type="submit" class="language">EN</button>
+                    </div>
+                    <div class="buttons-block__temp">
+                        <button type="submit" class="temp">C</button>
+                    </div>
+                </div>
+                <div class="header__search-container search-container">
+                    <div class="search-container__input-text">
+                        <input type="text" class="search-text" placeholder="Search city">
+                    </div>
+                    <div class="search-container__search-button">
+                        <button type="submit" class="search-button">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+            <div class="city-container">
+                <h2 class="city-container__city">MINSK, BELARUS</h2>
+                <h3 class="date">Mon 28 October 17:23</h3>
+            </div>
+            <div class="main-container">
+                <div class="main-container__temperature temperature">
+                    <div class="temperature__today today">
+                        <div class="todays__grad">
+                            <span class="today__grad">10</span>
+                        </div>
+                        
+                        <div class="today__properties">
+                            <span class="weather">OVERCAST</span>
+                            <span class="feels-like">FEELS LIKE: 7°</span>
+                            <span class="wind">WIND: 2 m/s</span>
+                            <span class="humidity">HUMIDITY: 83%</span>
+                        </div>
+                    </div>
+                    <div class="temperature__another-days another-days">
+                        <div class="another-days__day first-day">
+                            <span class="first-day__day day">TUESDAY</span>
+                            <span class="first-day__grad grad">7°</span>
+                        </div>
+                        <div class="another-days__day second-day">
+                            <span class="second-day__day day">WEDNESDAY</span>
+                            <span class="second-day__grad grad">6°</span>
+                        </div>
+                        <div class="another-days__day third-day">
+                            <span class="third-day__day day">THURSDAY</span>
+                            <span class="third-day__grad grad">3°</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div id="map"></div>
+                    <span class="latitude">Latitude: 53°54'</span>
+                    <span class="longitude">Longitude: 27°34'</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

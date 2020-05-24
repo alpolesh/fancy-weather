@@ -1,0 +1,12 @@
+.city-container {
+    @extend %font-add;
+    margin-top: 57px;
+    h2 {
+        font-size: 44px;
+    }
+    h3 {
+        font-size: 24px;
+        margin-top: 8px;
+    }
+}
+

@@ -1,0 +1,30 @@
+.header{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    @extend %font-add;
+    font-size: 14px;
+}
+
+.search-container{
+    display: flex;
+}
+
+.search-text {
+    height: 44px;
+}
+
+.search-button {
+    height: 44px;
+}
+
+.buttons-block{
+    display: flex;
+    .buttons-block__refresh{
+        margin-right: 10px;
+    }
+    .buttons-block__language{
+        margin-right: 10px;
+    }
+}
+

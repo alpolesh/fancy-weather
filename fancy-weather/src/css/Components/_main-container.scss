@@ -1,0 +1,42 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    @extend %font-add;
+}
+
+.main-container__temperature{
+    display: flex;
+    flex-direction: column;
+    .temperature__today {
+        .today__grad {
+            font-size: 306px;
+        }
+        display: flex;
+        .today__properties {
+            margin-left: 32px;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            span {
+                margin-top: 10px;
+                font-size: 22px;
+            }
+        }
+    }
+    .temperature__another-days {
+        display: flex;
+        justify-content: space-around;
+        .another-days__day {
+            display: flex;
+            flex-direction: column;
+            .day {
+                font-size: 22px;
+            }
+            .grad {
+                font-size: 80px;
+            }
+        }
+    }
+}
+
+
