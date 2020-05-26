@@ -11,7 +11,7 @@ async function getGeoLocation() {
         });
     }) 
     await promis;
-    return {"latitude": latitude, "longitude": longitude};
+    return {"lat": latitude, "lng": longitude};
 }
 
 export default getGeoLocation;

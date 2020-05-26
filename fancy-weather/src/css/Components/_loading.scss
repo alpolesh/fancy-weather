@@ -1,0 +1,17 @@
+.loading {
+    z-index: 10;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:white;
+}
+
+.fa-circle-o-notch {
+    z-index: 11;
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 110px;
+    color: #7ba7ab;
+    left: calc((100% - 110px)/2);
+    top: calc((100% - 110px)/2);
+}

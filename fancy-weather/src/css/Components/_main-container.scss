@@ -10,10 +10,17 @@
     .temperature__today {
         .today__grad {
             font-size: 306px;
+            position: relative;
+        }
+        .today__grad::after {
+            content: "°";
+            font-size: 100px;
+            position: absolute;
+            top: 60px;
         }
         display: flex;
         .today__properties {
-            margin-left: 32px;
+            margin-left: 55px;
             display: flex;
             flex-direction: column;
             align-self: center;

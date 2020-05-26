@@ -1,16 +1,16 @@
 
 
-function createMap() {
+function createMap(longitude, latitude) {
     mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwb2xlc2giLCJhIjoiY2thbGQwYm1qMDh6ejJycXdpa3k3NWN3ayJ9.TwPfqLAoUQzc47k6B_Rk0w';
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [12.550343, 55.665957],
+        center: [longitude, latitude],
         zoom: 8
     });
      
     const marker = new mapboxgl.Marker()
-        .setLngLat([12.550343, 55.665957])
+        .setLngLat([longitude, latitude])
         .addTo(map);
 };
 
