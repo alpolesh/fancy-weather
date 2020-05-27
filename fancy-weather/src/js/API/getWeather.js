@@ -13,6 +13,7 @@ async function getWeather(latitude, longitude) {
         tomorrowGrad: `${Math.round(data.data[1].temp)}°`,
         afterTomorrowGrad: `${Math.round(data.data[2].temp)}°`,
         in2DaysGrad: `${Math.round(data.data[3].temp)}°`,
+        timeZone: `${data.timezone}`
     }
 }
 

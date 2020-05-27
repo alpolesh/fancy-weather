@@ -17,3 +17,4 @@ async function getCoordinates(city) {
 }
 
 export default getCoordinates;
+

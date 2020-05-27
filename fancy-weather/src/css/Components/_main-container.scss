@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     @extend %font-add;
+    color: white;
 }
 
 .main-container__temperature{
@@ -16,7 +17,7 @@
             content: "°";
             font-size: 100px;
             position: absolute;
-            top: 60px;
+            top: 39px;
         }
         display: flex;
         .today__properties {
