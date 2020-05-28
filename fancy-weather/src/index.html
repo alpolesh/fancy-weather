@@ -14,9 +14,8 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
 </head>
-<body>
+<body class="background" style="background-image: url(https://images.unsplash.com/photo-1589649679912-a2ef2a62c997?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzNn0);">
     <div class="overlay"></div>
-    <div class="background" style="background-image: url(https://images.unsplash.com/photo-1589649679912-a2ef2a62c997?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzNn0);"></div>
     <div class="loading" style="display: none;"></div>
     <i class="fa fa-circle-o-notch fa-spin" style="display: none;"></i>
     <main>
@@ -33,14 +32,14 @@
                         <button type="submit" class="temp">C</button>
                     </div>
                 </div>
-                <div class="header__search-container search-container">
+                <form class="header__search-container search-container">
                     <div class="search-container__input-text">
                         <input type="text" class="search-text" placeholder="Search city">
                     </div>
                     <div class="search-container__search-button">
-                        <button type="submit" class="search-button">SEARCH</button>
+                        <input type="submit" class="search-button" value="Search">
                     </div>
-                </div>
+                </form>
             </div>
             <div class="city-container">
                 <h2 class="city-container__city">MINSK, BELARUS</h2>

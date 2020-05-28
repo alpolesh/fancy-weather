@@ -12,6 +12,7 @@ async function updatePage(city) {
     document.querySelector('.fa-circle-o-notch').style = 'display: block';
 
     // change coordinates and location
+    
     const {lat, lng, location} = await getCoordinates(city);
     document.querySelector('.latitude').textContent = `Latitude: ${converter.gradToMinutes(lat)}`;
     document.querySelector('.longitude').textContent = `Longitude: ${converter.gradToMinutes(lng)}`;
@@ -36,13 +37,13 @@ async function updatePage(city) {
     document.querySelector('.third-day__grad').textContent = `${in2DaysGrad}`;
 
     // change background image
-    try {
-        const backgroundImage = await getImage();
-        console.log(backgroundImage)
-        document.querySelector('.background').style = `background-image: url(${backgroundImage});`
-    } catch(err) {
-        console.log(err);
-    }
+    // try {
+    //     const backgroundImage = await getImage();
+    //     console.log(backgroundImage)
+    //     document.querySelector('.background').style = `background-image: url(${backgroundImage});`
+    // } catch(err) {
+    //     console.log(err);
+    // }
     
 
     document.querySelector('.date').textContent = createDate(store.lang);

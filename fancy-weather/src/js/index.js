@@ -4,13 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import createDate from './createDate';
 import updatePage from './updatePage';
 import store from './store';
+import searchCity from './buttons/searchCity';
 
 setInterval(() => {
   document.querySelector('.date').textContent = createDate(store.lang);
 }, 1000);
 
-updatePage('minsk');
+updatePage();
 
+searchCity();
 
 
 

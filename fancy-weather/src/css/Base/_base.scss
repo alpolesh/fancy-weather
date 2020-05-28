@@ -18,6 +18,9 @@ body {
     height: 100%;
     background-image: url(https://i.pinimg.com/originals/43/22/5a/43225aba74ba46ba733f83ec5084e73d.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     z-index: -2;
     opacity: .6;
 }

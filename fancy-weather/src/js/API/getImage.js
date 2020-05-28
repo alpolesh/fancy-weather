@@ -8,7 +8,7 @@ async function getImage() {
     const url = `https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query={${season}, ${dayTime}}&client_id=Pg_2s0dgVEZ72DMSy_7ge60IktDY7rUOZWCK_sdm61c`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data.alt_description);
+    console.log('request for background image: ', url);
     
     return data.urls.regular;    
 }
