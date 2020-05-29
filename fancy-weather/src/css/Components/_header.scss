@@ -6,25 +6,69 @@
     font-size: 14px;
 }
 
-.search-container{
-    display: flex;
+.mb-3 {
+    width: 300px!important;
 }
 
-.search-text {
-    height: 44px;
-}
-
-.search-button {
-    height: 44px;
+.btn-outline-secondary {
+    background-color: #AEB5B9!important;
+    color: white!important;
+    @extend %font-add;
 }
 
 .buttons-block{
     display: flex;
     .buttons-block__refresh{
+        height: 44px;
+        position: relative;
         margin-right: 10px;
+        .refresh {
+            width: 44px;
+            height: 44px;
+        }
+        img {
+            position: absolute;
+            height: 44px;
+        }
+        :hover {
+            cursor: pointer;
+        }
     }
     .buttons-block__language{
         margin-right: 10px;
+        text-align: center;
+        .language {
+            width: 71px!important;
+            height: 44px;
+            border: none;
+            border-radius: .25rem;
+            background-color: #AEB5B9;
+            color: white;
+            outline: none;
+            padding: 0 10px;
+        }
+    }
+    button {
+        height: 44px;
+        border: none;
+        border-radius: .25rem;
+        background-color: #AEB5B9;
+        color: white;
     }
 }
 
+form {
+    height: 44px!important;
+    input {
+        height: 44px!important;
+    }
+}
+
+.btn-group {
+    height: 44px;
+    .btn-secondary {
+        font-size: 14px!important;
+        padding-top: 10px;
+        background-color: #AEB5B9;
+    }
+}

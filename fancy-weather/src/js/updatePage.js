@@ -38,13 +38,20 @@ async function updatePage(city) {
 
     // change background image
     // try {
-    //     const backgroundImage = await getImage();
-    //     console.log(backgroundImage)
-    //     document.querySelector('.background').style = `background-image: url(${backgroundImage});`
+    //     const imageUrl = await getImage();
+    //     const backgroundImage = new Image();
+    //     backgroundImage.src = imageUrl;
+    //     backgroundImage.onload = () => {
+    //         document.querySelector('.background').style = `background-image: url(${backgroundImage.src});`
+    //         // stop spinning
+    //         document.querySelector('.loading').style = 'display: none';
+    //         document.querySelector('.fa-circle-o-notch').style = 'display: none';
+    //     }
     // } catch(err) {
-    //     console.log(err);
+    //     alert(err);
+    //     document.querySelector('.loading').style = 'display: none';
+    //     document.querySelector('.fa-circle-o-notch').style = 'display: none';
     // }
-    
 
     document.querySelector('.date').textContent = createDate(store.lang);
     document.querySelector('.loading').style = 'display: none';
