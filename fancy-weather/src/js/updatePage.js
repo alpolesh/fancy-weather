@@ -13,7 +13,8 @@ async function updatePage(city) {
 
     // change coordinates and location
     
-    const {lat, lng, location} = await getCoordinates(city);
+    const {lat, lng, location} = await getCoordinates(city, store.lang);
+    store.latitude = lat;
     document.querySelector('.latitude').textContent = `Latitude: ${converter.gradToMinutes(lat)}`;
     document.querySelector('.longitude').textContent = `Longitude: ${converter.gradToMinutes(lng)}`;
     document.querySelector('.city-container__city').textContent = `${location.toUpperCase()}`;

@@ -4,16 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import createDate from './createDate';
 import updatePage from './updatePage';
 import store from './store';
-import searchCity from './buttons/searchCity';
-import updateImage from './buttons/updateImage';
+import converter from './converter';
+import buttonListeners from './buttons/buttonListeners';
 
 setInterval(() => {
   document.querySelector('.date').textContent = createDate(store.lang);
 }, 1000);
 
 updatePage();
-searchCity();
-updateImage();
+buttonListeners.searchCity();
+buttonListeners.updateImage();
+buttonListeners.changeGrad();
+buttonListeners.changeLanguage();
+console.log(converter.celToFar(14))
 
 
 
