@@ -12,9 +12,9 @@ setInterval(() => {
 }, 1000);
 
 updatePage();
-buttonListeners.searchCity();
-buttonListeners.updateImage();
-buttonListeners.changeGrad();
+buttonListeners.buttonSearchCity();
+buttonListeners.buttonUpdateImage();
+buttonListeners.buttonChangeGrad();
 buttonListeners.changeLanguage();
 console.log(converter.celToFar(14))
 
