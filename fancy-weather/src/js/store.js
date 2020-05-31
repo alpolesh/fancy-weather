@@ -3,6 +3,7 @@ const store = {
     timeZone: '',
     grad: 'cel',
     latitude: '',
+    weatherCode: '',
 }
 
 export default store;

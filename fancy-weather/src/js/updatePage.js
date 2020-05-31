@@ -6,6 +6,7 @@ import createMap from './map/createMap';
 import createDate from './createDate';
 import getImage from './API/getImage';
 import store from './store';
+import translate from './buttons/translate';
 
 async function updatePage(city) {
     document.querySelector('.loading').style = 'display: block';
@@ -23,8 +24,9 @@ async function updatePage(city) {
     createMap(lng, lat);
 
     // change weather
-    const {weatherDescription, feelsLike, wind, humidity, currentGrad, tomorrowGrad, afterTomorrowGrad, in2DaysGrad, timeZone} = await getWeather(lat, lng);
+    const {weatherDescription, weatherCode, feelsLike, wind, humidity, currentGrad, tomorrowGrad, afterTomorrowGrad, in2DaysGrad, timeZone} = await getWeather(lat, lng);
     store.timeZone = timeZone;
+    store.weatherCode = weatherCode;
     document.querySelector('.weather').textContent = `${weatherDescription}`;
     document.querySelector('.feels-like').textContent = `FEELS LIKE: ${feelsLike}`;
     document.querySelector('.wind').textContent = `WIND: ${wind}`;
@@ -37,26 +39,28 @@ async function updatePage(city) {
     document.querySelector('.third-day__day').textContent = `${dates.dayFull[new Date().getDay() + 3]}`;
     document.querySelector('.third-day__grad').textContent = `${in2DaysGrad}`;
 
+    await translate();
+
     // change background image
-    // try {
-    //     const imageUrl = await getImage();
-    //     const backgroundImage = new Image();
-    //     backgroundImage.src = imageUrl;
-    //     backgroundImage.onload = () => {
-    //         document.querySelector('.background').style = `background-image: url(${backgroundImage.src});`
-    //         // stop spinning
-    //         document.querySelector('.loading').style = 'display: none';
-    //         document.querySelector('.fa-circle-o-notch').style = 'display: none';
-    //     }
-    // } catch(err) {
-    //     alert(err);
-    //     document.querySelector('.loading').style = 'display: none';
-    //     document.querySelector('.fa-circle-o-notch').style = 'display: none';
-    // }
+    try {
+        const imageUrl = await getImage();
+        const backgroundImage = new Image();
+        backgroundImage.src = imageUrl;
+        backgroundImage.onload = () => {
+            document.querySelector('.background').style = `background-image: url(${backgroundImage.src});`
+            // stop spinning
+            document.querySelector('.loading').style = 'display: none';
+            document.querySelector('.fa-circle-o-notch').style = 'display: none';
+        }
+    } catch(err) {
+        alert(err);
+        document.querySelector('.loading').style = 'display: none';
+        document.querySelector('.fa-circle-o-notch').style = 'display: none';
+    }
 
     document.querySelector('.date').textContent = createDate(store.lang);
-    document.querySelector('.loading').style = 'display: none';
-    document.querySelector('.fa-circle-o-notch').style = 'display: none';
+    // document.querySelector('.loading').style = 'display: none';
+    // document.querySelector('.fa-circle-o-notch').style = 'display: none';
 }
 
 export default updatePage;

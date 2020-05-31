@@ -8,7 +8,7 @@ async function updateImage() {
         document.querySelector('.background').style = `background-image: url(./img/bg1.jpg);`;
     } else {
         backgroundImage.onload = () => {
-            document.querySelector('.background').style = `background-image: url(${backgroundImage.src});`
+            document.querySelector('.background').style = `background-image: url(${backgroundImage.src}); transition: background-image 1s;`
         }
     }
 }

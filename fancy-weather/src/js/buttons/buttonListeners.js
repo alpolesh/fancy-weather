@@ -39,8 +39,13 @@ const buttonListeners = {
                     store.lang = 'ru';
                     translate();
                     break;
+                case 2:
+                    store.lang = 'be';
+                    translate();
+                    break;
                 default:
-
+                    store.lang = 'en';
+                    translate();
             }
         })
     }
