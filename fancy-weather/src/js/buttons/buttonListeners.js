@@ -21,14 +21,14 @@ const buttonListeners = {
     buttonChangeGrad() {
         document.querySelector('.far').addEventListener('click', () => {
             if (store.grad === 'cel') {
-                changeGrad();
                 store.grad = 'far';
+                changeGrad();
             }
         });
         document.querySelector('.cel').addEventListener('click', () => {
             if (store.grad === 'far') {
-                changeGrad();
                 store.grad = 'cel';
+                changeGrad();
             }
         })
     },

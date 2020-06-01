@@ -7,6 +7,8 @@ import createDate from './createDate';
 import getImage from './API/getImage';
 import store from './store';
 import translate from './buttons/translate';
+import weatherIcons from './constants/weatherIcons';
+import changeGrad from './buttons/changeGrad';
 
 async function updatePage(city) {
     document.querySelector('.loading').style = 'display: block';
@@ -24,9 +26,12 @@ async function updatePage(city) {
     createMap(lng, lat);
 
     // change weather
-    const {weatherDescription, weatherCode, feelsLike, wind, humidity, currentGrad, tomorrowGrad, afterTomorrowGrad, in2DaysGrad, timeZone} = await getWeather(lat, lng);
+    const {weatherDescription, weatherCode, weatherCodeFirst, weatherCodeSecond, weatherCodeThird, feelsLike, wind, humidity, currentGrad, tomorrowGrad, afterTomorrowGrad, in2DaysGrad, timeZone} = await getWeather(lat, lng);
     store.timeZone = timeZone;
     store.weatherCode = weatherCode;
+    store.weatherCodeFirst = weatherCodeFirst;
+    store.weatherCodeSecond = weatherCodeSecond;
+    store.weatherCodeThird = weatherCodeThird;
     document.querySelector('.weather').textContent = `${weatherDescription}`;
     document.querySelector('.feels-like').textContent = `FEELS LIKE: ${feelsLike}`;
     document.querySelector('.wind').textContent = `WIND: ${wind}`;
@@ -38,7 +43,13 @@ async function updatePage(city) {
     document.querySelector('.second-day__grad').textContent = `${afterTomorrowGrad}`;
     document.querySelector('.third-day__day').textContent = `${dates.dayFull[new Date().getDay() + 3]}`;
     document.querySelector('.third-day__grad').textContent = `${in2DaysGrad}`;
-
+    // change weather icons
+    document.querySelector('.today__element').innerHTML = weatherIcons[`${store.weatherCode}`];
+    document.querySelector('.first-day .another-days__element').innerHTML = weatherIcons[`${store.weatherCodeFirst}`];
+    document.querySelector('.second-day .another-days__element').innerHTML = weatherIcons[`${store.weatherCodeSecond}`];
+    document.querySelector('.third-day .another-days__element').innerHTML = weatherIcons[`${store.weatherCodeThird}`];
+    
+    if (store.grad === 'far') await changeGrad();
     await translate();
 
     // change background image

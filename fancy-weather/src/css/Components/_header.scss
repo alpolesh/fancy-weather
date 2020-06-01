@@ -4,10 +4,17 @@
     justify-content: space-between;
     @extend %font-add;
     font-size: 14px;
+    @media (max-width: $mobile-width) { 
+        flex-direction: column;
+    }
 }
 
 .mb-3 {
     width: 300px!important;
+    margin-bottom: 0!important;
+    @media (max-width: $mobile-width) { 
+        margin-top: 10px;
+    }
 }
 
 .btn-outline-secondary {

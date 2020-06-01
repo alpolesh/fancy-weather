@@ -1,6 +1,5 @@
 .wrapper {
     margin: 0 auto;
-    max-width: 1440px;
     padding-left: 20px;
     padding-right: 20px;
     @include media-tablet {
@@ -12,28 +11,5 @@
         width: 320px;
         padding-left: 10px;
         padding-right: 10px;
-    }
-}
-.wrapper-input {
-    @include media-mobile {
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-.footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    @include media-tablet {
-        width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-    };
-    @include media-mobile {
-        width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
     }
 }

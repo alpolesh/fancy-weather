@@ -4,6 +4,9 @@ const store = {
     grad: 'cel',
     latitude: '',
     weatherCode: '',
+    weatherCodeFirst: '',
+    weatherCodeSecond: '',
+    weatherCodeThird: '',
 }
 
 export default store;

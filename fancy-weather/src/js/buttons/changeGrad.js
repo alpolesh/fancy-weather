@@ -8,7 +8,7 @@ function changeGrad() {
     const secondDayTemp = document.querySelector('.second-day__grad');
     const thirdDayTemp = document.querySelector('.third-day__grad');
     switch(store.grad) {
-        case 'cel':
+        case 'far':
             currentTemp.textContent = converter.celToFar(currentTemp.textContent);
             feelsLike.textContent = feelsLike.textContent.replace(/\d+/g, converter.celToFar(feelsLike.textContent.match(/\d+/g)[0]));
             firstDayTemp.textContent = `${converter.celToFar(firstDayTemp.textContent.match(/\d+/g)[0])}°`;
