@@ -6,6 +6,7 @@ import updatePage from './updatePage';
 import store from './store';
 import converter from './converter';
 import buttonListeners from './buttons/buttonListeners';
+import speechRecognition from './speechRecognition';
 
 setInterval(() => {
   document.querySelector('.date').textContent = createDate(store.lang);
@@ -16,7 +17,7 @@ buttonListeners.buttonSearchCity();
 buttonListeners.buttonUpdateImage();
 buttonListeners.buttonChangeGrad();
 buttonListeners.changeLanguage();
-console.log(converter.celToFar(14))
+buttonListeners.buttonMicro();
 
-
+speechRecognition();
 

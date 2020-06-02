@@ -70,13 +70,37 @@ form {
     input {
         height: 44px!important;
     }
+    .fa-microphone {
+        position: absolute;
+        z-index: 1;
+        right: 34%;
+        top: 11px;
+        color: #6c757d;
+        cursor: pointer;
+    }
 }
 
 .btn-group {
     height: 44px;
+    margin-right: 10px;
     .btn-secondary {
         font-size: 14px!important;
         padding-top: 10px;
         background-color: #AEB5B9;
     }
+}
+
+.btn-group-micro {
+    .btn-secondary {
+        padding-top: 2px;
+    } 
+}
+
+.micro-indicator {
+    position: absolute;
+    content: "•";
+    font-size: 29px;
+    top: 0px;
+    left: 1px;
+    color: #01e601;
 }

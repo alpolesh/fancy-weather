@@ -36,16 +36,26 @@
                             <option value="Be">BE</option>
                         </select>
                     </div>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <div class="btn-group btn-group-toggle btn-group-grad" data-toggle="buttons">
                         <label class="btn btn-secondary cel active">
                           <input type="radio" name="options" id="cel" autocomplete="off" checked> °C
                         </label>
                         <label class="btn btn-secondary far">
                           <input type="radio" name="options" id="far" autocomplete="off"> °F
                         </label>
-                      </div>
+                    </div>
+                    <div class="btn-group btn-group-toggle btn-group-micro" data-toggle="buttons">
+                        <label class="btn btn-secondary micro-on">
+                            <span class="micro-indicator" style="display: none;">•</span>
+                          <input type="radio" name="options" id="micro-on" autocomplete="off"> Micro<br> On
+                        </label>
+                        <label class="btn btn-secondary micro-off active">
+                          <input type="radio" name="options" id="micro-off" autocomplete="off" checked> Micro<br> off
+                        </label>
+                    </div>
                 </div>
                 <form class="input-group mb-3">
+                    <i class="fa fa-microphone" style="font-size:24px"></i>
                     <input type="text" class="form-control" placeholder="Enter city" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-outline-secondary" type="submit">SEARCH</button>

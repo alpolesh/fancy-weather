@@ -106,16 +106,17 @@
     .gray {fill:#E0E0E0}
     .yellow {fill:#FFEB3B}
     .another-days__element {
-        position: absolute;
+        position: initial;
         height: 45px;
         width: 45px;
-        margin: 10px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 0;
         top: 14px;
         left: 100%;
     }
     @media (max-width: $mobile-width) { 
         .another-days__element {
-            position: initial;
             height: 25px;
             width: 25px;
             margin-top: 5px;

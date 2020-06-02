@@ -1,16 +1,15 @@
 /* eslint-disable no-case-declarations */
-import updatePage from '../updatePage';
 import store from '../store';
 import translate from './translate';
 import updateImage from './updateImage';
 import changeGrad from './changeGrad';
+import searchCity from './seachCity';
 
 const buttonListeners = {
     buttonSearchCity() {
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
-            const inputValue = document.querySelector('.form-control').value;
-            updatePage(inputValue);
+            searchCity();
         })
     },
     buttonUpdateImage() {
@@ -47,6 +46,25 @@ const buttonListeners = {
                     store.lang = 'en';
                     translate();
             }
+        })
+    },
+    buttonMicro() {
+        const recognizer = new webkitSpeechRecognition();
+        recognizer.interimResults = true;
+        document.querySelector('.micro-on').addEventListener('click', () => {
+            // recognizer.continuous = true;
+            recognizer.start();
+            
+            recognizer.onspeechstart = (event) => {
+                document.querySelector('.micro-indicator').style = 'display: block';
+                console.log(event);
+            }
+            recognizer.onspeechend = (e) => {
+                document.querySelector('.micro-indicator').style = 'display: none';
+            }
+        })
+        document.querySelector('.micro-off').addEventListener('click', () => {
+            recognizer.abort();
         })
     }
 }
