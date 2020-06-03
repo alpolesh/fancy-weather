@@ -7,6 +7,8 @@ const store = {
     weatherCodeFirst: '',
     weatherCodeSecond: '',
     weatherCodeThird: '',
+    speechRec: false,
+    voiceSearch: false,
 }
 
 export default store;

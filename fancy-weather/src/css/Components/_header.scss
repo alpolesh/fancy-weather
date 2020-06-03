@@ -56,12 +56,36 @@
             padding: 0 10px;
         }
     }
+
+    .buttons-block__listen{
+        height: 44px;
+        width: 44px;
+        position: relative;
+        margin-right: 10px;
+        background-color: #aeb5b9;
+        border-radius: .25rem;
+        background-color: #AEB5B9;
+        .fa-bullhorn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+        }
+        cursor: pointer;
+        @media (max-width: $tablet-width) { 
+            margin-top: 10px;
+        }
+    }
+
     button {
         height: 44px;
         border: none;
         border-radius: .25rem;
         background-color: #AEB5B9;
         color: white;
+    }
+    @media (max-width: $tablet-width) { 
+        flex-wrap: wrap;
     }
 }
 
@@ -73,7 +97,7 @@ form {
     .fa-microphone {
         position: absolute;
         z-index: 1;
-        right: 34%;
+        right: 102px;
         top: 11px;
         color: #6c757d;
         cursor: pointer;
@@ -94,6 +118,9 @@ form {
     .btn-secondary {
         padding-top: 2px;
     } 
+    @media (max-width: $tablet-width) { 
+        margin-top: 10px;
+    }
 }
 
 .micro-indicator {
